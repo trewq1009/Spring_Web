@@ -1,0 +1,26 @@
+=============== 게시글 테이블 =========================
+데이터 베이스 안되는 상황이므로 이곳에 작성
+
+-테이블 생성
+create table freeboard(
+	bno number(10),
+	title varchar2(200) not null,
+	writer varchar2(50) not null,
+	content varchar2(2000),
+	regdate date default sysdate,
+	updatedate date default sysdate
+);
+
+-pk 지정
+alter table freeboard add constraint freeboard_pk primary key (bno);
+
+- 시퀀스 추가
+create sequence freeboard_seq increment by 1 start with 1 nocache;
+
+
+
+
+
+
+
+
